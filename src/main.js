@@ -1,7 +1,7 @@
 //---------------------增-----------------------
 //creat方法测试 新建节点
-const div = dom.create("<div><span>root</span></div>")
-console.log(div);
+const div1 = dom.create("<div><span>root</span></div>")
+console.log(div1);
 //after方法测试 添加弟弟
 const div2 = dom.create("<div>YoungNode</div>")
 dom.after(test, div2)
@@ -59,3 +59,8 @@ console.log(dom.siblings(childNode));
 let travelNode = dom.find('#travel')[0]
 dom.each(dom.children(travelNode), n => dom.style(n, 'color', 'red'))
 console.log(dom.index(travelNode));
+//----------------------作业测试------------------------
+const div = dom.find('#test>.red')[0] // 获取对应的元素
+dom.style(div, 'color', 'red') // 设置 div.style.color
+const divList = dom.find('.red') // 获取多个 div.red 元素
+dom.each(divList, (n) => console.log(n)) // 遍历 divList 里的所有元素
